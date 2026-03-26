@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Production de contenu Festival QDCM — Média Mauricie 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#f0eeeb;}
+body{font-family:'Montserrat',sans-serif;background:#f0eeeb;color:#1a1a1a;min-height:100vh;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:960px;margin:0 auto;padding:48px 24px 80px;}
+
+/* HEADER */
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:16px;}
+.header-logos{display:flex;align-items:center;gap:20px;}
+.header-divider{width:1px;height:36px;background:#ccc;}
+.header-badge{background:#2d2d2d;color:#fff;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:20px;}
+
+/* HERO — dark strip */
+.hero-strip{background:#1e1e1e;border-radius:18px;padding:44px 48px;margin-bottom:12px;}
+.hero-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#666;margin-bottom:14px;}
+.hero-title{font-size:44px;font-weight:700;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:18px;}
+.hero-sub{font-size:12px;font-weight:500;color:#888;line-height:1.9;max-width:520px;}
+
+/* EVENT BADGES inside hero */
+.event-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;}
+.event-badge{background:#2a2a2a;border:1px solid #333;border-radius:10px;padding:10px 16px;}
+.event-badge-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;margin-bottom:3px;}
+.event-badge-value{font-size:12px;font-weight:800;color:#ccc;}
+
+/* SECTION TITLE */
+.section-title{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#999;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.section-title::after{content:'';flex:1;height:1px;background:#ddd;}
+
+/* FORFAIT BLOCK */
+.forfait-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;overflow:hidden;margin-bottom:10px;}
+.forfait-top{padding:22px 26px 0;}
+.forfait-tag{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;background:#3a3a3a;padding:4px 13px;border-radius:20px;display:inline-block;margin-bottom:16px;}
+.forfait-block.featured .forfait-tag{background:#1e1e1e;}
+.forfait-block.featured{border:1.5px solid #2d2d2d;border-top:3px solid #1e1e1e;}
+
+/* PRICE ROW */
+.price-row-wrap{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0;padding:0 26px 22px;}
+.pbox{border-radius:10px;padding:14px 16px;}
+.pbox.soft{background:#f7f6f4;border:1px solid #e8e6e2;}
+.pbox.mid{background:#2d2d2d;border:1px solid #2d2d2d;}
+.pbox-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-bottom:6px;}
+.pbox.mid .pbox-label{color:rgba(255,255,255,0.35);}
+.pbox-price{font-size:30px;font-weight:800;color:#1a1a1a;letter-spacing:-1.5px;line-height:1;}
+.pbox-price.struck{font-size:22px;color:#bbb;text-decoration:line-through;text-decoration-color:#c0392b;text-decoration-thickness:2px;}
+.pbox.mid .pbox-price{color:#fff;}
+.pbox-unit{font-size:10px;font-weight:600;color:#bbb;margin-top:4px;}
+.pbox.mid .pbox-unit{color:rgba(255,255,255,0.3);}
+.pbox-note{font-size:10px;font-weight:700;color:#999;margin-top:5px;}
+.pbox.mid .pbox-note{color:rgba(255,255,255,0.45);}
+.pbox-special{display:inline-block;background:#fff5f5;border:1px solid #fcc;border-radius:20px;padding:3px 10px;font-size:9px;font-weight:800;color:#c0392b;margin-top:7px;}
+
+/* TOTAL BOX for video */
+.total-box{background:#f7f6f4;border:1px solid #e4e2de;border-radius:10px;padding:12px 16px;display:flex;align-items:baseline;gap:10px;margin:0 26px 22px;}
+.total-box-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#aaa;}
+.total-box-price{font-size:26px;font-weight:800;color:#1a1a1a;letter-spacing:-1px;}
+.total-box-unit{font-size:10px;font-weight:600;color:#bbb;}
+
+/* DETAIL TABLE */
+.detail-table{width:100%;border-collapse:collapse;}
+.detail-table td{padding:10px 26px;font-size:11px;font-weight:600;color:#555;border-top:1px solid #f0eeeb;vertical-align:top;line-height:1.65;}
+.detail-table td:first-child{width:28px;color:#2d2d2d;font-weight:900;padding-right:0;padding-left:26px;}
+.detail-table td strong{color:#1a1a1a;}
+.detail-table tr:last-child td{padding-bottom:22px;}
+
+/* SUB SECTION inside table */
+.sub-section-row td{padding-top:14px !important;padding-bottom:4px !important;}
+.sub-section-label{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;}
+
+/* COMPARISON TABLE */
+.comp-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;overflow:hidden;margin-bottom:10px;}
+.comp-block-title{padding:20px 26px 16px;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#999;border-bottom:1px solid #f0eeeb;display:flex;align-items:center;gap:12px;}
+.comp-block-title::after{content:'';flex:1;height:1px;background:#ebebeb;}
+table.comp{width:100%;border-collapse:collapse;}
+table.comp thead th{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:12px 18px;text-align:center;background:#2d2d2d;color:#fff;border-right:1px solid #3a3a3a;}
+table.comp thead th:first-child{text-align:left;background:#f0eeeb;color:#aaa;border-right:1px solid #e4e2de;}
+table.comp thead th:last-child{border-right:none;}
+table.comp tbody tr{border-bottom:1px solid #f0eeeb;}
+table.comp tbody tr:last-child{border-bottom:none;}
+table.comp tbody td{padding:10px 18px;font-size:11px;font-weight:600;color:#888;text-align:center;}
+table.comp tbody td:first-child{text-align:left;color:#444;font-weight:700;background:#faf9f7;}
+table.comp tbody tr.price-r td{background:#f0eeeb;font-size:14px;font-weight:900;color:#1a1a1a;padding:13px 18px;}
+table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;background:#e8e6e2;}
+.ck{color:#1a1a1a;font-weight:900;font-size:14px;}
+.da{color:#ddd;}
+
+/* INCLUS STRIP */
+.inclus-strip{background:#2d2d2d;border-radius:10px;padding:14px 20px;margin-bottom:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.inclus-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#555;white-space:nowrap;flex-shrink:0;}
+.inclus-items{display:flex;gap:7px;flex-wrap:wrap;}
+.inclus-item{background:#383838;border:1px solid #444;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:600;color:#999;}
+
+/* DRONE */
+.drone-note{background:#edf5ed;border:1px solid #c4dcc4;border-radius:12px;padding:16px 20px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;}
+.drone-text{font-size:11px;font-weight:600;color:#4a784a;line-height:1.75;}
+.drone-text strong{color:#2d5a2d;}
+
+/* CONDITIONS */
+.cond-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;padding:24px 26px;margin-bottom:10px;}
+.cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;}
+.cond-item{display:flex;gap:8px;font-size:11px;font-weight:600;color:#777;line-height:1.65;padding:9px 0;border-bottom:1px solid #f5f3f0;}
+.cond-item:last-child,.cond-item:nth-last-child(2):nth-child(odd){border-bottom:none;}
+.cond-item strong{color:#333;}
+.ni{color:#1a1a1a;font-weight:900;flex-shrink:0;margin-top:2px;}
+
+/* TAXES / FOOTER */
+.taxes{background:#2d2d2d;color:#555;font-size:10px;font-weight:600;text-align:center;padding:10px 20px;border-radius:8px;margin-bottom:12px;}
+.taxes strong{color:#888;}
+.footer{padding-top:24px;border-top:1px solid #ddd;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:48px;}
+.footer-info{font-size:10px;font-weight:500;color:#aaa;text-align:right;line-height:1.8;}
+.footer-info a{color:#777 !important;font-weight:700;}
+
+@media(max-width:700px){
+  .hero-title{font-size:32px;}
+  .price-row-wrap{grid-template-columns:1fr;padding:0 18px 18px;}
+  .total-box{margin:0 18px 18px;}
+  .cond-grid{grid-template-columns:1fr;}
+  .header,.footer{flex-direction:column;align-items:flex-start;}
+  .footer-info{text-align:left;}
+  .hero-strip{padding:28px 22px;}
+  table.comp th,table.comp td{padding:8px 10px;font-size:10px;}
+  .detail-table td{padding:9px 18px;}
+  .detail-table td:first-child{padding-left:18px;}
+}
+@media(max-width:500px){
+  .wrap{padding:16px 12px 56px;}
+  .forfait-top{padding:18px 18px 0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-logos">
+    <img src="https://www.dropbox.com/scl/fi/1dbg9hdjagqzroodyvm8l/Images-45-Vari-s.png?rlkey=i64k2f588yktfwac5m6oz5gph&st=972cl1dx&dl=1" alt="QDCM Metal Fest" style="height:48px;object-fit:contain;">
+    <div class="header-divider"></div>
+    <img src="https://mediamauricie.com/wp-content/uploads/2026/03/Media-Mauricie_logo_M-coul.png" alt="Média Mauricie" style="height:36px;">
+  </div>
+  <div class="header-badge">Proposition commanditaire · 2026</div>
+</div>
+
+<!-- HERO -->
+<div class="hero-strip">
+  <div class="hero-eyebrow">Trois-Rivières · 17 & 18 juillet 2026</div>
+  <div class="hero-title">Production de contenu<br>Festival QDCM.</div>
+  <div class="hero-sub">Deux soirées de metal. Une communauté soudée. Du contenu photo et vidéo livré avec votre marque au premier plan — pour que votre commandite résonne bien après le dernier set.</div>
+  <div class="event-badges">
+    <div class="event-badge"><div class="event-badge-label">Festival</div><div class="event-badge-value">QDCM Metal Fest</div></div>
+    <div class="event-badge"><div class="event-badge-label">Dates</div><div class="event-badge-value">17 & 18 juillet 2026</div></div>
+    <div class="event-badge"><div class="event-badge-label">Lieu</div><div class="event-badge-value">Trois-Rivières, QC</div></div>
+    <div class="event-badge"><div class="event-badge-label">Transport</div><div class="event-badge-value">Inclus</div></div>
+  </div>
+</div>
+
+<!-- FORFAITS PHOTO -->
+<div style="height:12px;"></div>
+<div class="section-title">Forfaits photo</div>
+
+<!-- PHOTO 1 SOIR -->
+<div class="forfait-block">
+  <div class="forfait-top">
+    <div class="forfait-tag">📸 Photo — 1 soirée · 3h sur place</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Tarif régulier</div>
+      <div class="pbox-price struck">1 350$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Prix festival QDCM</div>
+      <div class="pbox-price">800$</div>
+      <div class="pbox-unit">+ tx</div>
+      <div class="pbox-special">✦ Offre commanditaire</div>
+    </div>
+  </div>
+  <table class="detail-table">
+    <tr><td>✓</td><td><strong>80 photos HD retouchées</strong> — ambiance, artistes, commanditaires, musiciens, foule</td></tr>
+    <tr><td>✓</td><td>Album dédié — accès commanditaire & organisation</td></tr>
+    <tr><td>✓</td><td>Option logo commanditaire sur les photos partagées</td></tr>
+    <tr><td>✓</td><td>Droits commerciaux illimités · Transport inclus · Remise <strong>48–72h</strong></td></tr>
+  </table>
+</div>
+
+<!-- PHOTO 2 SOIRS -->
+<div class="forfait-block featured">
+  <div class="forfait-top">
+    <div class="forfait-tag">📸 Photo — 2 soirées · 2h/soirée</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Tarif régulier</div>
+      <div class="pbox-price struck">2 000$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Prix festival QDCM</div>
+      <div class="pbox-price">1 500$</div>
+      <div class="pbox-unit">+ tx</div>
+      <div class="pbox-special">✦ Offre commanditaire</div>
+    </div>
+  </div>
+  <table class="detail-table">
+    <tr><td>✓</td><td><strong>80 photos HD retouchées par soirée</strong> — 160 photos au total</td></tr>
+    <tr><td>✓</td><td>Artistes, ambiance, foule, musiciens, commanditaires — couverture complète des 2 soirées</td></tr>
+    <tr><td>✓</td><td>Album dédié — accès commanditaire & organisation</td></tr>
+    <tr><td>✓</td><td>Option logo commanditaire sur les photos partagées</td></tr>
+    <tr><td>✓</td><td>Droits commerciaux illimités · Transport inclus · Remise <strong>48–72h</strong></td></tr>
+  </table>
+</div>
+
+<!-- FORFAITS VIDÉO -->
+<div style="height:20px;"></div>
+<div class="section-title">Forfaits vidéo — Reels cinématiques</div>
+
+<!-- VIDÉO 1 SOIR -->
+<div class="forfait-block">
+  <div class="forfait-top">
+    <div class="forfait-tag">🎬 Vidéo — 1 soirée · 2–3h sur place</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Tournage · captation & transfert</div>
+      <div class="pbox-price">1 000$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Montage reel cinématique</div>
+      <div class="pbox-price">500$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+  </div>
+  <div class="total-box">
+    <span class="total-box-label">Total</span>
+    <span class="total-box-price">1 500$</span>
+    <span class="total-box-unit">+ tx</span>
+  </div>
+  <table class="detail-table">
+    <tr><td>✓</td><td>Captation ambiance, artistes, pit, foule, énergie du festival</td></tr>
+    <tr><td>✓</td><td><strong>1 reel cinématique 60s ou 2 reels × 30s</strong> — commanditaire mis de l'avant · musique des artistes intégrée</td></tr>
+    <tr><td>✓</td><td>Voxpop inclus — témoignages & ambiance · sous-titres · colorisation · logo animé commanditaire · format 9:16</td></tr>
+    <tr><td>✓</td><td>1 révision mineure incluse · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
+  </table>
+</div>
+
+<!-- VIDÉO 2 SOIRS -->
+<div class="forfait-block featured">
+  <div class="forfait-top">
+    <div class="forfait-tag">🎬 Vidéo — 2 soirées · 2h/soirée</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Valeur régulière</div>
+      <div class="pbox-price struck">3 000$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Prix festival QDCM</div>
+      <div class="pbox-price">2 150$</div>
+      <div class="pbox-unit">+ tx</div>
+      <div class="pbox-special">✦ Offre commanditaire</div>
+    </div>
+  </div>
+  <table class="detail-table">
+    <tr><td>✓</td><td>Tournage les 2 soirées — ambiance, artistes, pit, foule, énergie</td></tr>
+    <tr><td>✓</td><td><strong>1 reel cinématique par soirée</strong> (2 reels au total) — 60s ou 2×30s · commanditaire mis de l'avant · musique des artistes intégrée</td></tr>
+    <tr><td>✓</td><td>Voxpop inclus — témoignages & ambiance · sous-titres · colorisation · logo animé commanditaire · format 9:16</td></tr>
+    <tr><td>✓</td><td>1 révision mineure par reel · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
+  </table>
+</div>
+
+<!-- PACKAGES COMPLETS -->
+<div style="height:20px;"></div>
+<div class="section-title">Packages complets — Photo + Vidéo</div>
+
+<!-- PACKAGE 1 SOIR -->
+<div class="forfait-block">
+  <div class="forfait-top">
+    <div class="forfait-tag">🔥 Package — 1 soirée · 2–3h sur place</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Valeur combinée</div>
+      <div class="pbox-price struck">2 300$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Prix festival QDCM</div>
+      <div class="pbox-price">1 950$</div>
+      <div class="pbox-unit">+ tx · photographe + vidéaste</div>
+      <div class="pbox-special">✦ Offre commanditaire</div>
+    </div>
+  </div>
+  <table class="detail-table">
+    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">📸 Photo</span></td></tr>
+    <tr><td>✓</td><td><strong>50 photos HD retouchées</strong> — ambiance, artistes, commanditaires, foule · album dédié · Remise <strong>48–72h</strong></td></tr>
+    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">🎬 Vidéo</span></td></tr>
+    <tr><td>✓</td><td><strong>1 reel 60s ou 2 reels × 30s</strong> — commanditaire mis de l'avant · musique des artistes · voxpop inclus</td></tr>
+    <tr><td>✓</td><td>Colorisation · logo animé · format 9:16 · 1 révision · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
+  </table>
+</div>
+
+<!-- PACKAGE 2 SOIRS -->
+<div class="forfait-block featured">
+  <div class="forfait-top">
+    <div class="forfait-tag">🔥 Package — 2 soirées · 2h/soirée ★</div>
+  </div>
+  <div class="price-row-wrap">
+    <div class="pbox soft">
+      <div class="pbox-label">Valeur combinée</div>
+      <div class="pbox-price struck">3 650$</div>
+      <div class="pbox-unit">+ tx</div>
+    </div>
+    <div class="pbox mid">
+      <div class="pbox-label">Prix festival QDCM</div>
+      <div class="pbox-price">3 000$</div>
+      <div class="pbox-unit">+ tx · photographe + vidéaste</div>
+      <div class="pbox-special">✦ Offre commanditaire</div>
+    </div>
+  </div>
+  <table class="detail-table">
+    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">📸 Photo — 2 soirées</span></td></tr>
+    <tr><td>✓</td><td><strong>50 photos HD retouchées par soirée</strong> — 100 photos au total · artistes, ambiance, foule, organisateurs</td></tr>
+    <tr><td>✓</td><td>Album dédié · option logo commanditaire sur photos partagées · Remise <strong>48–72h</strong></td></tr>
+    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">🎬 Vidéo — 2 reels cinématiques</span></td></tr>
+    <tr><td>✓</td><td><strong>2 reels cinématiques</strong> — recap festival & pub commanditaire (usage à déterminer ensemble)</td></tr>
+    <tr><td>✓</td><td>Ambiance, musique des artistes, pit, foule, organisateurs · voxpop inclus · colorisation · logo animé · 9:16</td></tr>
+    <tr><td>✓</td><td>1 révision par reel · Transport inclus · Photos <strong>48–72h</strong> · Reels <strong>5–15 jours</strong></td></tr>
+  </table>
+</div>
+
+<!-- TABLEAU COMPARATIF -->
+<div style="height:20px;"></div>
+<div class="section-title">Tableau comparatif</div>
+<div class="comp-block">
+  <table class="comp">
+    <thead>
+      <tr>
+        <th style="background:#f0eeeb;color:#aaa;text-align:left;"></th>
+        <th>📸 Photo</th>
+        <th>🎬 Vidéo</th>
+        <th>🔥 Package</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Photos HD retouchées</td><td><span class="ck">✓</span></td><td><span class="da">—</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Reels cinématiques</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Musique artistes intégrée</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Voxpop inclus</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Logo commanditaire animé</td><td style="font-size:10px;color:#aaa;">option</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Album dédié</td><td><span class="ck">✓</span></td><td><span class="da">—</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Droits commerciaux illimités</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Transport inclus</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr class="price-r"><td>1 soirée</td><td>800$</td><td>1 500$</td><td>1 950$</td></tr>
+      <tr class="price-r"><td>2 soirées</td><td>1 500$</td><td>2 150$</td><td>3 000$</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- INCLUS STRIP -->
+<div class="inclus-strip">
+  <div class="inclus-label">Tous les forfaits</div>
+  <div class="inclus-items">
+    <span class="inclus-item">Transport inclus — Trois-Rivières</span>
+    <span class="inclus-item">Droits commerciaux illimités</span>
+    <span class="inclus-item">Assurances RC 2M$</span>
+    <span class="inclus-item">Album dédié</span>
+  </div>
+</div>
+
+<!-- DRONE -->
+<div class="drone-note">
+  <div style="font-size:18px;flex-shrink:0;margin-top:2px;">🚁</div>
+  <div class="drone-text">
+    <strong>Drone disponible sur demande</strong> — Média Mauricie détient les assurances RC professionnelles de 2 000 000 $ et travaille avec des pilotes certifiés Transport Canada. Une autorisation municipale de la Ville de Trois-Rivières est nécessaire — les démarches sont prises en charge. Frais additionnels selon complexité. Sans autorisation, des prises au sol dynamiques sont intégrées sans frais supplémentaires.
+  </div>
+</div>
+
+<!-- CONDITIONS -->
+<div class="cond-block">
+  <div class="section-title" style="margin-bottom:16px;">Conditions</div>
+  <div class="cond-grid">
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Photos :</strong> remise complète dans les 48–72h suivant chaque soirée.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Reels :</strong> livrés dans les 5–15 jours suivant l'événement.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>1 révision mineure</strong> incluse par livrable vidéo.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Droits illimités</strong> — réseaux, web, affichage, presse. Décharge requise si personnes reconnaissables.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Crédit Média Mauricie</strong> dans les publications lorsque possible. Droit de portfolio conservé.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Assurances complètes</strong> — RC professionnelle 2M$ photo, vidéo & drone.</span></div>
+  </div>
+</div>
+
+<div class="taxes">Tous les prix <strong>+ taxes applicables (TPS/TVQ)</strong> · Proposition valide jusqu'au 31 décembre 2026</div>
+
+<div class="footer">
+  <img src="https://mediamauricie.com/wp-content/uploads/2026/03/Media-Mauricie_logo_coul.png" alt="Média Mauricie" style="height:28px;">
+  <div class="footer-info">
+    <a href="https://www.mediamauricie.com">www.mediamauricie.com</a> · info@mediamauricie.com · (819) 852-0851<br>
+    © Média Mauricie Inc. 2026 · Victoria J. Polsoni, Présidente-fondatrice
+  </div>
+</div>
+
+</div>
+</body>
+</html>
