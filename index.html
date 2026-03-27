@@ -18,77 +18,75 @@ a{color:inherit;text-decoration:none;}
 .header-divider{width:1px;height:36px;background:#ccc;}
 .header-badge{background:#2d2d2d;color:#fff;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:20px;}
 
-/* HERO — dark strip */
+/* HERO */
 .hero-strip{background:#1e1e1e;border-radius:18px;padding:44px 48px;margin-bottom:12px;}
 .hero-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#666;margin-bottom:14px;}
 .hero-title{font-size:44px;font-weight:700;color:#fff;line-height:1.0;letter-spacing:-2px;margin-bottom:18px;}
 .hero-sub{font-size:12px;font-weight:500;color:#888;line-height:1.9;max-width:520px;}
-
-/* EVENT BADGES inside hero */
 .event-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;}
 .event-badge{background:#2a2a2a;border:1px solid #333;border-radius:10px;padding:10px 16px;}
 .event-badge-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;margin-bottom:3px;}
-.event-badge-value{font-size:12px;font-weight:800;color:#ccc;}
+.event-badge-value{font-size:12px;font-weight:700;color:#ccc;}
 
 /* SECTION TITLE */
 .section-title{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#999;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
 .section-title::after{content:'';flex:1;height:1px;background:#ddd;}
 
-/* FORFAIT BLOCK */
-.forfait-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;overflow:hidden;margin-bottom:10px;}
-.forfait-top{padding:22px 26px 0;}
-.forfait-tag{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;background:#3a3a3a;padding:4px 13px;border-radius:20px;display:inline-block;margin-bottom:16px;}
-.forfait-block.featured .forfait-tag{background:#1e1e1e;}
-.forfait-block.featured{border:1.5px solid #2d2d2d;border-top:3px solid #1e1e1e;}
+/* SIDE-BY-SIDE GRID */
+.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
 
-/* PRICE ROW */
-.price-row-wrap{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0;padding:0 26px 22px;}
+/* FORFAIT BLOCK */
+.forfait-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;overflow:hidden;}
+.forfait-block.featured{border:1.5px solid #2d2d2d;border-top:3px solid #1e1e1e;}
+.forfait-top{padding:20px 22px 0;}
+.forfait-tag{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:#3a3a3a;padding:4px 11px;border-radius:20px;display:inline-block;margin-bottom:14px;}
+.forfait-block.featured .forfait-tag{background:#1e1e1e;}
+
+/* PRICE BOX */
 .pbox{border-radius:10px;padding:14px 16px;}
+.pbox.solo{margin:0 22px 14px;}
 .pbox.soft{background:#f7f6f4;border:1px solid #e8e6e2;}
 .pbox.mid{background:#2d2d2d;border:1px solid #2d2d2d;}
-.pbox-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-bottom:6px;}
+.pbox-label{font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:6px;}
 .pbox.mid .pbox-label{color:rgba(255,255,255,0.35);}
-.pbox-price{font-size:30px;font-weight:800;color:#1a1a1a;letter-spacing:-1.5px;line-height:1;}
-.pbox-price.struck{font-size:22px;color:#bbb;text-decoration:line-through;text-decoration-color:#c0392b;text-decoration-thickness:2px;}
-.pbox.mid .pbox-price{color:#fff;}
+.pbox-price{font-size:26px;font-weight:600;color:#3a3a3a;letter-spacing:-1px;line-height:1;}
+.pbox.mid .pbox-price{color:#e0e0e0;}
 .pbox-unit{font-size:10px;font-weight:600;color:#bbb;margin-top:4px;}
 .pbox.mid .pbox-unit{color:rgba(255,255,255,0.3);}
-.pbox-note{font-size:10px;font-weight:700;color:#999;margin-top:5px;}
-.pbox.mid .pbox-note{color:rgba(255,255,255,0.45);}
-.pbox-special{display:inline-block;background:#fff5f5;border:1px solid #fcc;border-radius:20px;padding:3px 10px;font-size:9px;font-weight:800;color:#c0392b;margin-top:7px;}
+.pbox-special{display:inline-block;background:#fff5f5;border:1px solid #fcc;border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;color:#c0392b;margin-top:7px;}
 
-/* TOTAL BOX for video */
-.total-box{background:#f7f6f4;border:1px solid #e4e2de;border-radius:10px;padding:12px 16px;display:flex;align-items:baseline;gap:10px;margin:0 26px 22px;}
-.total-box-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#aaa;}
-.total-box-price{font-size:26px;font-weight:800;color:#1a1a1a;letter-spacing:-1px;}
+/* VIDEO split prices */
+.price-split{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 22px 6px;}
+
+/* TOTAL BOX */
+.total-box{background:#f7f6f4;border:1px solid #e4e2de;border-radius:10px;padding:10px 14px;display:flex;align-items:baseline;gap:8px;margin:0 22px 14px;}
+.total-box-label{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;}
+.total-box-price{font-size:22px;font-weight:600;color:#3a3a3a;letter-spacing:-0.5px;}
 .total-box-unit{font-size:10px;font-weight:600;color:#bbb;}
 
-/* DETAIL TABLE */
-.detail-table{width:100%;border-collapse:collapse;}
-.detail-table td{padding:10px 26px;font-size:11px;font-weight:600;color:#555;border-top:1px solid #f0eeeb;vertical-align:top;line-height:1.65;}
-.detail-table td:first-child{width:28px;color:#2d2d2d;font-weight:900;padding-right:0;padding-left:26px;}
-.detail-table td strong{color:#1a1a1a;}
-.detail-table tr:last-child td{padding-bottom:22px;}
+/* DETAIL LIST */
+.detail-list{padding:0 22px 18px;}
+.detail-item{display:flex;gap:8px;font-size:10.5px;font-weight:600;color:#555;line-height:1.6;padding:6px 0;border-top:1px solid #f0eeeb;}
+.detail-item:first-child{border-top:none;}
+.detail-icon{color:#2d2d2d;font-weight:700;flex-shrink:0;margin-top:1px;}
+.detail-item strong{color:#1a1a1a;}
 
-/* SUB SECTION inside table */
-.sub-section-row td{padding-top:14px !important;padding-bottom:4px !important;}
-.sub-section-label{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;}
+/* SUB LABEL */
+.sub-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:10px 22px 2px;display:block;}
 
 /* COMPARISON TABLE */
 .comp-block{background:#fff;border-radius:14px;border:1px solid #e4e2de;overflow:hidden;margin-bottom:10px;}
-.comp-block-title{padding:20px 26px 16px;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#999;border-bottom:1px solid #f0eeeb;display:flex;align-items:center;gap:12px;}
-.comp-block-title::after{content:'';flex:1;height:1px;background:#ebebeb;}
 table.comp{width:100%;border-collapse:collapse;}
-table.comp thead th{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:12px 18px;text-align:center;background:#2d2d2d;color:#fff;border-right:1px solid #3a3a3a;}
+table.comp thead th{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 18px;text-align:center;background:#2d2d2d;color:#ccc;border-right:1px solid #3a3a3a;}
 table.comp thead th:first-child{text-align:left;background:#f0eeeb;color:#aaa;border-right:1px solid #e4e2de;}
 table.comp thead th:last-child{border-right:none;}
 table.comp tbody tr{border-bottom:1px solid #f0eeeb;}
 table.comp tbody tr:last-child{border-bottom:none;}
-table.comp tbody td{padding:10px 18px;font-size:11px;font-weight:600;color:#888;text-align:center;}
-table.comp tbody td:first-child{text-align:left;color:#444;font-weight:700;background:#faf9f7;}
-table.comp tbody tr.price-r td{background:#f0eeeb;font-size:14px;font-weight:900;color:#1a1a1a;padding:13px 18px;}
-table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;background:#e8e6e2;}
-.ck{color:#1a1a1a;font-weight:900;font-size:14px;}
+table.comp tbody td{padding:9px 18px;font-size:11px;font-weight:600;color:#888;text-align:center;}
+table.comp tbody td:first-child{text-align:left;color:#555;font-weight:600;background:#faf9f7;}
+table.comp tbody tr.price-r td{background:#f0eeeb;font-size:14px;font-weight:600;color:#3a3a3a;padding:12px 18px;}
+table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;background:#e8e6e2;}
+.ck{color:#3a3a3a;font-weight:700;font-size:14px;}
 .da{color:#ddd;}
 
 /* INCLUS STRIP */
@@ -108,7 +106,7 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
 .cond-item{display:flex;gap:8px;font-size:11px;font-weight:600;color:#777;line-height:1.65;padding:9px 0;border-bottom:1px solid #f5f3f0;}
 .cond-item:last-child,.cond-item:nth-last-child(2):nth-child(odd){border-bottom:none;}
 .cond-item strong{color:#333;}
-.ni{color:#1a1a1a;font-weight:900;flex-shrink:0;margin-top:2px;}
+.ni{color:#3a3a3a;font-weight:700;flex-shrink:0;margin-top:2px;}
 
 /* TAXES / FOOTER */
 .taxes{background:#2d2d2d;color:#555;font-size:10px;font-weight:600;text-align:center;padding:10px 20px;border-radius:8px;margin-bottom:12px;}
@@ -117,21 +115,18 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
 .footer-info{font-size:10px;font-weight:500;color:#aaa;text-align:right;line-height:1.8;}
 .footer-info a{color:#777 !important;font-weight:700;}
 
-@media(max-width:700px){
+@media(max-width:680px){
+  .duo-grid{grid-template-columns:1fr;}
   .hero-title{font-size:32px;}
-  .price-row-wrap{grid-template-columns:1fr;padding:0 18px 18px;}
-  .total-box{margin:0 18px 18px;}
   .cond-grid{grid-template-columns:1fr;}
   .header,.footer{flex-direction:column;align-items:flex-start;}
   .footer-info{text-align:left;}
   .hero-strip{padding:28px 22px;}
   table.comp th,table.comp td{padding:8px 10px;font-size:10px;}
-  .detail-table td{padding:9px 18px;}
-  .detail-table td:first-child{padding-left:18px;}
 }
 @media(max-width:500px){
   .wrap{padding:16px 12px 56px;}
-  .forfait-top{padding:18px 18px 0;}
+  .price-split{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -162,184 +157,145 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
 </div>
 
 <!-- FORFAITS PHOTO -->
-<div style="height:12px;"></div>
-<div class="section-title">Forfaits photo</div>
+<div style="height:20px;"></div>
+<div class="section-title">📸 Forfaits photo</div>
+<div class="duo-grid">
 
-<!-- PHOTO 1 SOIR -->
-<div class="forfait-block">
-  <div class="forfait-top">
-    <div class="forfait-tag">📸 Photo — 1 soirée · 3h sur place</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Tarif régulier</div>
-      <div class="pbox-price struck">1 350$</div>
-      <div class="pbox-unit">+ tx</div>
-    </div>
-    <div class="pbox mid">
+  <div class="forfait-block">
+    <div class="forfait-top"><div class="forfait-tag">1 soirée · 3h sur place</div></div>
+    <div class="pbox mid solo">
       <div class="pbox-label">Prix festival QDCM</div>
-      <div class="pbox-price">800$</div>
+      <div class="pbox-price">850$</div>
       <div class="pbox-unit">+ tx</div>
       <div class="pbox-special">✦ Offre commanditaire</div>
     </div>
-  </div>
-  <table class="detail-table">
-    <tr><td>✓</td><td><strong>50 photos HD retouchées</strong> — ambiance, artistes, commanditaires, musiciens, foule</td></tr>
-    <tr><td>✓</td><td>Album dédié — accès commanditaire & organisation</td></tr>
-    <tr><td>✓</td><td>Option logo commanditaire sur les photos partagées</td></tr>
-    <tr><td>✓</td><td>Droits commerciaux illimités · Transport inclus · Remise <strong>48–72h</strong></td></tr>
-  </table>
-</div>
-
-<!-- PHOTO 2 SOIRS -->
-<div class="forfait-block featured">
-  <div class="forfait-top">
-    <div class="forfait-tag">📸 Photo — 2 soirées · 2h/soirée</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Tarif régulier</div>
-      <div class="pbox-price struck">2 000$</div>
-      <div class="pbox-unit">+ tx</div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>50 photos HD retouchées</strong> — ambiance, artistes, commanditaires, foule</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Album dédié · option logo commanditaire</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Droits illimités · Remise <strong>48–72h</strong></span></div>
     </div>
-    <div class="pbox mid">
+  </div>
+
+  <div class="forfait-block featured">
+    <div class="forfait-top"><div class="forfait-tag">2 soirées · 3h/soirée</div></div>
+    <div class="pbox mid solo">
       <div class="pbox-label">Prix festival QDCM</div>
-      <div class="pbox-price">1 500$</div>
-      <div class="pbox-unit">+ tx</div>
+      <div class="pbox-price">1 700$</div>
+      <div class="pbox-unit">+ tx · 850$ × 2 soirées</div>
       <div class="pbox-special">✦ Offre commanditaire</div>
     </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>100 photos HD retouchées</strong> — 50/soirée · couverture complète</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Album dédié · option logo commanditaire</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Droits illimités · Remise <strong>48–72h</strong></span></div>
+    </div>
   </div>
-  <table class="detail-table">
-    <tr><td>✓</td><td><strong>50 photos HD retouchées par soirée</strong> — 100 photos au total</td></tr>
-    <tr><td>✓</td><td>Artistes, ambiance, foule, musiciens, commanditaires — couverture complète des 2 soirées</td></tr>
-    <tr><td>✓</td><td>Album dédié — accès commanditaire & organisation</td></tr>
-    <tr><td>✓</td><td>Option logo commanditaire sur les photos partagées</td></tr>
-    <tr><td>✓</td><td>Droits commerciaux illimités · Transport inclus · Remise <strong>48–72h</strong></td></tr>
-  </table>
+
 </div>
 
 <!-- FORFAITS VIDÉO -->
-<div style="height:20px;"></div>
-<div class="section-title">Forfaits vidéo — Reels cinématiques</div>
+<div class="section-title">🎬 Forfaits vidéo — Reels cinématiques</div>
+<div class="duo-grid">
 
-<!-- VIDÉO 1 SOIR -->
-<div class="forfait-block">
-  <div class="forfait-top">
-    <div class="forfait-tag">🎬 Vidéo — 1 soirée · 2–3h sur place</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Tournage · captation & transfert</div>
-      <div class="pbox-price">1 000$</div>
-      <div class="pbox-unit">+ tx</div>
+  <div class="forfait-block">
+    <div class="forfait-top"><div class="forfait-tag">1 soirée · 3h sur place</div></div>
+    <div class="price-split">
+      <div class="pbox soft">
+        <div class="pbox-label">Tournage</div>
+        <div class="pbox-price" style="font-size:20px;">850$</div>
+        <div class="pbox-unit">+ tx</div>
+      </div>
+      <div class="pbox mid">
+        <div class="pbox-label">Montage reel</div>
+        <div class="pbox-price" style="font-size:20px;">500$</div>
+        <div class="pbox-unit">+ tx</div>
+      </div>
     </div>
-    <div class="pbox mid">
-      <div class="pbox-label">Montage reel cinématique</div>
-      <div class="pbox-price">500$</div>
-      <div class="pbox-unit">+ tx</div>
+    <div class="total-box">
+      <span class="total-box-label">Total</span>
+      <span class="total-box-price">1 350$</span>
+      <span class="total-box-unit">+ tx</span>
+    </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>1 reel 60s ou 2 × 30s</strong> — commanditaire mis de l'avant</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Voxpop · sous-titres · logo animé · 9:16</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>1 révision · Livraison <strong>5–10 jours</strong></span></div>
     </div>
   </div>
-  <div class="total-box">
-    <span class="total-box-label">Total</span>
-    <span class="total-box-price">1 500$</span>
-    <span class="total-box-unit">+ tx</span>
-  </div>
-  <table class="detail-table">
-    <tr><td>✓</td><td>Captation ambiance, artistes, pit, foule, énergie du festival</td></tr>
-    <tr><td>✓</td><td><strong>1 reel cinématique 60s ou 2 reels × 30s</strong> — commanditaire mis de l'avant · musique des artistes intégrée</td></tr>
-    <tr><td>✓</td><td>Voxpop inclus — témoignages & ambiance · sous-titres · colorisation · logo animé commanditaire · format 9:16</td></tr>
-    <tr><td>✓</td><td>1 révision mineure incluse · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
-  </table>
-</div>
 
-<!-- VIDÉO 2 SOIRS -->
-<div class="forfait-block featured">
-  <div class="forfait-top">
-    <div class="forfait-tag">🎬 Vidéo — 2 soirées · 2h/soirée</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Valeur régulière</div>
-      <div class="pbox-price struck">3 000$</div>
-      <div class="pbox-unit">+ tx</div>
+  <div class="forfait-block featured">
+    <div class="forfait-top"><div class="forfait-tag">2 soirées · 3h/soirée</div></div>
+    <div class="price-split">
+      <div class="pbox soft">
+        <div class="pbox-label">Tournage × 2</div>
+        <div class="pbox-price" style="font-size:20px;">1 700$</div>
+        <div class="pbox-unit">+ tx · 850$ × 2</div>
+      </div>
+      <div class="pbox mid">
+        <div class="pbox-label">Montage × 2 reels</div>
+        <div class="pbox-price" style="font-size:20px;">1 000$</div>
+        <div class="pbox-unit">+ tx · 500$ × 2</div>
+      </div>
     </div>
-    <div class="pbox mid">
-      <div class="pbox-label">Prix festival QDCM</div>
-      <div class="pbox-price">2 150$</div>
-      <div class="pbox-unit">+ tx</div>
-      <div class="pbox-special">✦ Offre commanditaire</div>
+    <div class="total-box">
+      <span class="total-box-label">Total</span>
+      <span class="total-box-price">2 700$</span>
+      <span class="total-box-unit">+ tx</span>
+    </div>
+    <div class="detail-list">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>2 reels cinématiques</strong> — 1 par soirée · commanditaire mis de l'avant</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>Voxpop · sous-titres · logo animé · 9:16</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>1 révision/reel · Livraison <strong>5–10 jours</strong></span></div>
     </div>
   </div>
-  <table class="detail-table">
-    <tr><td>✓</td><td>Tournage les 2 soirées — ambiance, artistes, pit, foule, énergie</td></tr>
-    <tr><td>✓</td><td><strong>1 reel cinématique par soirée</strong> (2 reels au total) — 60s ou 2×30s · commanditaire mis de l'avant · musique des artistes intégrée</td></tr>
-    <tr><td>✓</td><td>Voxpop inclus — témoignages & ambiance · sous-titres · colorisation · logo animé commanditaire · format 9:16</td></tr>
-    <tr><td>✓</td><td>1 révision mineure par reel · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
-  </table>
+
 </div>
 
 <!-- PACKAGES COMPLETS -->
-<div style="height:20px;"></div>
-<div class="section-title">Packages complets — Photo + Vidéo</div>
+<div class="section-title">🔥 Packages complets — Photo + Vidéo</div>
+<div class="duo-grid">
 
-<!-- PACKAGE 1 SOIR -->
-<div class="forfait-block">
-  <div class="forfait-top">
-    <div class="forfait-tag">🔥 Package — 1 soirée · 2–3h sur place</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Valeur combinée</div>
-      <div class="pbox-price struck">2 300$</div>
-      <div class="pbox-unit">+ tx</div>
-    </div>
-    <div class="pbox mid">
-      <div class="pbox-label">Prix festival QDCM</div>
-      <div class="pbox-price">1 950$</div>
+  <div class="forfait-block">
+    <div class="forfait-top"><div class="forfait-tag">1 soirée · 3h sur place</div></div>
+    <div class="pbox mid solo">
+      <div class="pbox-label">Photo 850$ + Vidéo 1 350$</div>
+      <div class="pbox-price">2 200$</div>
       <div class="pbox-unit">+ tx · photographe + vidéaste</div>
       <div class="pbox-special">✦ Offre commanditaire</div>
     </div>
-  </div>
-  <table class="detail-table">
-    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">📸 Photo</span></td></tr>
-    <tr><td>✓</td><td><strong>50 photos HD retouchées</strong> — ambiance, artistes, commanditaires, foule · album dédié · Remise <strong>48–72h</strong></td></tr>
-    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">🎬 Vidéo</span></td></tr>
-    <tr><td>✓</td><td><strong>1 reel 60s ou 2 reels × 30s</strong> — commanditaire mis de l'avant · musique des artistes · voxpop inclus</td></tr>
-    <tr><td>✓</td><td>Colorisation · logo animé · format 9:16 · 1 révision · Transport inclus · Livraison <strong>5–10 jours</strong></td></tr>
-  </table>
-</div>
-
-<!-- PACKAGE 2 SOIRS -->
-<div class="forfait-block featured">
-  <div class="forfait-top">
-    <div class="forfait-tag">🔥 Package — 2 soirées · 2h/soirée ★</div>
-  </div>
-  <div class="price-row-wrap">
-    <div class="pbox soft">
-      <div class="pbox-label">Valeur combinée</div>
-      <div class="pbox-price struck">3 650$</div>
-      <div class="pbox-unit">+ tx</div>
+    <span class="sub-label">📸 Photo</span>
+    <div class="detail-list" style="padding-top:4px;">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>50 photos HD retouchées</strong> · album dédié · <strong>48–72h</strong></span></div>
     </div>
-    <div class="pbox mid">
-      <div class="pbox-label">Prix festival QDCM</div>
-      <div class="pbox-price">3 000$</div>
+    <span class="sub-label">🎬 Vidéo</span>
+    <div class="detail-list" style="padding-top:4px;">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>1 reel 60s ou 2 × 30s</strong> · voxpop · logo animé · 9:16</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>1 révision · Livraison <strong>5–10 jours</strong></span></div>
+    </div>
+  </div>
+
+  <div class="forfait-block featured">
+    <div class="forfait-top"><div class="forfait-tag">2 soirées · 3h/soirée ★</div></div>
+    <div class="pbox mid solo">
+      <div class="pbox-label">Photo 1 700$ + Vidéo 2 700$</div>
+      <div class="pbox-price">4 400$</div>
       <div class="pbox-unit">+ tx · photographe + vidéaste</div>
       <div class="pbox-special">✦ Offre commanditaire</div>
     </div>
+    <span class="sub-label">📸 Photo — 2 soirées</span>
+    <div class="detail-list" style="padding-top:4px;">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>100 photos HD retouchées</strong> · album dédié · logo · <strong>48–72h</strong></span></div>
+    </div>
+    <span class="sub-label">🎬 Vidéo — 2 reels</span>
+    <div class="detail-list" style="padding-top:4px;">
+      <div class="detail-item"><span class="detail-icon">✓</span><span><strong>2 reels cinématiques</strong> · voxpop · logo animé · 9:16</span></div>
+      <div class="detail-item"><span class="detail-icon">✓</span><span>1 révision/reel · Photos <strong>48–72h</strong> · Reels <strong>5–15 jours</strong></span></div>
+    </div>
   </div>
-  <table class="detail-table">
-    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">📸 Photo — 2 soirées</span></td></tr>
-    <tr><td>✓</td><td><strong>50 photos HD retouchées par soirée</strong> — 100 photos au total · artistes, ambiance, foule, organisateurs</td></tr>
-    <tr><td>✓</td><td>Album dédié · option logo commanditaire sur photos partagées · Remise <strong>48–72h</strong></td></tr>
-    <tr class="sub-section-row"><td></td><td><span class="sub-section-label">🎬 Vidéo — 2 reels cinématiques</span></td></tr>
-    <tr><td>✓</td><td><strong>2 reels cinématiques</strong> — recap festival & pub commanditaire (usage à déterminer ensemble)</td></tr>
-    <tr><td>✓</td><td>Ambiance, musique des artistes, pit, foule, organisateurs · voxpop inclus · colorisation · logo animé · 9:16</td></tr>
-    <tr><td>✓</td><td>1 révision par reel · Transport inclus · Photos <strong>48–72h</strong> · Reels <strong>5–15 jours</strong></td></tr>
-  </table>
+
 </div>
 
 <!-- TABLEAU COMPARATIF -->
-<div style="height:20px;"></div>
 <div class="section-title">Tableau comparatif</div>
 <div class="comp-block">
   <table class="comp">
@@ -354,14 +310,12 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
     <tbody>
       <tr><td>Photos HD retouchées</td><td><span class="ck">✓</span></td><td><span class="da">—</span></td><td><span class="ck">✓</span></td></tr>
       <tr><td>Reels cinématiques</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
-      <tr><td>Musique artistes intégrée</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
-      <tr><td>Voxpop inclus</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
-      <tr><td>Logo commanditaire animé</td><td style="font-size:10px;color:#aaa;">option</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
-      <tr><td>Album dédié</td><td><span class="ck">✓</span></td><td><span class="da">—</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Voxpop + logo animé</td><td><span class="da">—</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Logo commanditaire</td><td style="font-size:10px;color:#aaa;">option</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
       <tr><td>Droits commerciaux illimités</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
       <tr><td>Transport inclus</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
-      <tr class="price-r"><td>1 soirée</td><td>800$</td><td>1 500$</td><td>1 950$</td></tr>
-      <tr class="price-r"><td>2 soirées</td><td>1 500$</td><td>2 150$</td><td>3 000$</td></tr>
+      <tr class="price-r"><td>1 soirée</td><td>850$</td><td>1 350$</td><td>2 200$</td></tr>
+      <tr class="price-r"><td>2 soirées</td><td>1 700$</td><td>2 700$</td><td>4 400$</td></tr>
     </tbody>
   </table>
 </div>
@@ -381,7 +335,7 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
 <div class="drone-note">
   <div style="font-size:18px;flex-shrink:0;margin-top:2px;">🚁</div>
   <div class="drone-text">
-    <strong>Drone disponible sur demande</strong> — Média Mauricie détient les assurances RC professionnelles de 2 000 000 $ et travaille avec des pilotes certifiés Transport Canada. Une autorisation municipale de la Ville de Trois-Rivières est nécessaire — les démarches sont prises en charge. Frais additionnels selon complexité. Sans autorisation, des prises au sol dynamiques sont intégrées sans frais supplémentaires.
+    <strong>Drone disponible sur demande</strong> — Assurances RC 2 000 000 $ · pilotes certifiés Transport Canada · autorisation municipale Trois-Rivières prise en charge. Frais additionnels selon complexité. Sans autorisation, des prises au sol dynamiques sont intégrées sans frais supplémentaires.
   </div>
 </div>
 
@@ -389,11 +343,11 @@ table.comp tbody tr.price-r td:first-child{font-size:9px;font-weight:800;letter-
 <div class="cond-block">
   <div class="section-title" style="margin-bottom:16px;">Conditions</div>
   <div class="cond-grid">
-    <div class="cond-item"><span class="ni">✓</span><span><strong>Photos :</strong> remise complète dans les 48–72h suivant chaque soirée.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Photos :</strong> remise dans les 48–72h suivant chaque soirée.</span></div>
     <div class="cond-item"><span class="ni">✓</span><span><strong>Reels :</strong> livrés dans les 5–15 jours suivant l'événement.</span></div>
     <div class="cond-item"><span class="ni">✓</span><span><strong>1 révision mineure</strong> incluse par livrable vidéo.</span></div>
-    <div class="cond-item"><span class="ni">✓</span><span><strong>Droits illimités</strong> — réseaux, web, affichage, presse. Décharge requise si personnes reconnaissables.</span></div>
-    <div class="cond-item"><span class="ni">✓</span><span><strong>Crédit Média Mauricie</strong> dans les publications lorsque possible. Droit de portfolio conservé.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Droits illimités</strong> — réseaux, web, affichage, presse.</span></div>
+    <div class="cond-item"><span class="ni">✓</span><span><strong>Crédit Média Mauricie</strong> dans les publications · droit de portfolio conservé.</span></div>
     <div class="cond-item"><span class="ni">✓</span><span><strong>Assurances complètes</strong> — RC professionnelle 2M$ photo, vidéo & drone.</span></div>
   </div>
 </div>
